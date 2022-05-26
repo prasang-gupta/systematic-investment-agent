@@ -1,0 +1,8 @@
+tensorflow==2.8.0
+protobuf==3.19.4
+yfinance==0.1.70
+scikit-learn==0.22.2
+matplotlib==3.5.1
+tqdm==4.62.3
+func_timeout==4.3.5
+psutil==5.9.0
