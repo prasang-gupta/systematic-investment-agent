@@ -5,7 +5,7 @@
 
 This code is for replicating experiments presented in the paper 'Intelligent Systematic Investment Agent: an ensemble of deep learning and evolutionary strategies' and submmited to NeurIPS 2022. This page contains step by step instructions on replicating the experiments presented in the paper and instructions on creating new ones to stress test the model. The code is written purely in python and all dependencies are included in requirements.txt.
 
-#### Repository structure
+### Repository structure
 
     .
     ├── actorcritic
@@ -30,7 +30,7 @@ This code is for replicating experiments presented in the paper 'Intelligent Sys
     ├── requirements.txt        # Requirements file for environment setup
     └── ...
 
-#### Dependencies
+### Dependencies
 
 The code is dependent on packages that can be installed by running the requirements file.
 To install requirements:
@@ -39,9 +39,9 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-#### GADLE algorithm
+### GADLE algorithm
 
-##### For reproducing results
+#### For reproducing results
 
 - Change to the `ga` directory and run the `val.py` script as:
 
@@ -50,7 +50,7 @@ cd ga
 python scripts/val.py
 ```
 
-##### For training fresh model
+#### For training fresh model
 
 - `scripts/dataprep.py` : This generates episodic samples, does feature engineering, scaling and finds the optimal action vectors for all episodes using genetic algorithm that is subsequently used as a training dataset for the nueral network.
 ```
@@ -93,9 +93,9 @@ optional arguments:
                         start date for validation period (default: 2020-1-1)
 ```
 
-#### Actor Critic agent
+### Actor Critic agent
 
-##### For reproducing results
+#### For reproducing results
 
 - Change to the `actorcritic` directory and run the `val.py` script as:
 
@@ -104,7 +104,7 @@ cd actorcritic
 python val.py
 ```
 
-##### For training fresh model
+#### For training fresh model
 
 - `train.py` : This trains the new actor critic agent from scratch (with controlled exploration and LR-scheduled NN training with the same number of parameters as the GADLE algorithm) and saves the model files and logs in the same folder.
 
@@ -151,9 +151,9 @@ optional arguments:
   --model MODEL  model file to get results for (default: latest file)
 ```
 
-#### DQN agent
+### DQN agent
 
-##### For reproducing results
+#### For reproducing results
 
 - Change to the `dqn` directory and run the `val.py` script as:
 
@@ -162,7 +162,7 @@ cd dqn
 python val.py
 ```
 
-##### For training fresh model
+#### For training fresh model
 
 - `train.py` : This trains the new DQN agent from scratch (with controlled exploration, unusual sampled experience replay and LR-scheduled NN training with the same number of parameters as the GADLE algorithm) and saves the model files and logs in the same folder.
 
